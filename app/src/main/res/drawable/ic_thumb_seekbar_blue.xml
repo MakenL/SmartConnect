@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <size
+                android:width="@dimen/dimenSeekBarThumbWidth"
+                android:height="@dimen/dimenSeekBarThumbHeight"/>
+            <stroke
+                android:width="@dimen/dimenSeekBarThumbStrokePressed"
+                android:color="@color/colorSeekBarThumbStroke"/>
+            <solid android:color="@color/colorSeekBarThumbBluePressed"/>
+
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <size
+                android:width="@dimen/dimenSeekBarThumbWidth"
+                android:height="@dimen/dimenSeekBarThumbHeight"/>
+            <solid android:color="@color/colorSeekBarThumbBlue"/>
+        </shape>
+    </item>
+</selector>

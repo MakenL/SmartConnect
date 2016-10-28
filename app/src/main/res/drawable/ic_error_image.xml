@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="180dp"
+    android:height="160dp"
+    android:viewportHeight="100"
+    android:viewportWidth="100">
+
+    <!-- Phone. -->
+    <path
+        android:strokeWidth="2"
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,75 Q27,74 40,82 Q47,75 56,81 Q59,77 63,81 Q72,74 75,75 L75,25 Q75,20 70,20 L30,20 Q25,20 25,25z"/>
+    <path
+        android:strokeWidth="1"
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:pathData="M29,75 L29,30 L71,30 L71,75"/>
+
+    <path
+        android:fillColor="@color/colorPaletteGreyBlue"
+        android:pathData="M42.9,26.2 A1.2,1.2 0 1,1 43,26.2"/>
+    <path
+        android:strokeWidth="1.5"
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:pathData="M48,25 L65,25"/>
+    <path
+        android:fillColor="@color/colorPaletteGreyBlue"
+        android:pathData="M41.9,53 A2,2 0 1,1 42,53 M57.9,53 A2,2 0 1,1 58,53"/>
+    <path
+        android:strokeWidth="2"
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:pathData="M42,62 Q50,57 58,62"/>
+    <!-- Wave. -->
+    <path
+        android:strokeWidth="3"
+        android:strokeColor="@color/colorPaletteBlue"
+        android:pathData="M15,77 Q28,72 40,82 Q47,75 56,81 Q59,77 63,81 Q72,72 85,77"/>
+    <path
+        android:strokeWidth="1.5"
+        android:strokeColor="@color/colorPaletteBlue"
+        android:pathData="M30,83 Q36,85 40,89.5 Q42,87 45,86 M70,83 Q75,80 80,82"/>
+
+</vector>

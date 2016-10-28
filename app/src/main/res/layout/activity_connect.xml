@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPlaceholder"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimenAppBarHeight"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/connect_appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="enterAlways"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="88dp"
+            app:expandedTitleMarginBottom="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_gravity="start|bottom"
+                android:layout_marginStart="88dp"
+                android:layout_marginBottom="88dp"
+                android:text="@string/app_title" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/connect_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="enterAlways"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                tools:menu="@menu/menu_connect" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_logo"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="8dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:layout_collapseMode="parallax"
+                tools:ignore="ContentDescription" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/dialog_connect"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/btdevice_list"
+        android:name="com.embedhome.btlamp.fragment.btDeviceList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPlaceholder"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layoutManager="GridLayoutManager"
+        app:spanCount="2"
+        android:paddingTop="@dimen/dimenRecycledPaddingTop"
+        android:paddingBottom="@dimen/dimenRecycledPaddingBottom"
+        android:paddingLeft="@dimen/dimenRecycledPaddingLeftRight"
+        android:paddingRight="@dimen/dimenRecycledPaddingLeftRight"
+        android:visibility="invisible"
+        tools:context="com.embedhome.btlamp.dialogs.btDeviceList"
+        tools:listitem="@layout/btdevice_item"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:id="@+id/fab_anim"
+        android:layout_margin="@dimen/dimenFabMargin"
+        android:layout_gravity="bottom|end"
+        app:srcCompat="@drawable/imageConnectFabAnim"
+        android:visibility="invisible"
+        tools:ignore="ContentDescription" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/dimenFabMargin"
+        app:srcCompat="@drawable/imageConnectFab"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
+
+</android.support.design.widget.CoordinatorLayout>

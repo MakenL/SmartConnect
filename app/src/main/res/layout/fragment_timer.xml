@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/lamp_logo_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/imageLampTimerLogo"
+            tools:ignore="ContentDescription"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <NumberPicker
+            android:id="@+id/lamp_hour_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lamp_logo_timer"
+            android:layout_alignStart="@+id/lamp_logo_timer" />
+
+        <NumberPicker
+            android:id="@+id/lamp_min_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lamp_logo_timer"
+            android:layout_alignEnd="@+id/lamp_logo_timer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextPrimary"
+            android:text="@string/textTimeDevider"
+            android:layout_below="@+id/lamp_logo_timer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:id="@+id/lamp_clrtimer_button"
+            android:layout_width="@dimen/dimenButtonWidth"
+            android:layout_height="wrap_content"
+            android:text="@string/actionTextReset"
+            style="@style/styleActionButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/lamp_hour_timer" />
+
+        <Button
+            android:id="@+id/lamp_settimer_button"
+            android:layout_width="@dimen/dimenButtonWidth"
+            android:layout_height="wrap_content"
+            android:text="@string/actionTextSet"
+            style="@style/styleActionAccentButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/lamp_min_timer" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

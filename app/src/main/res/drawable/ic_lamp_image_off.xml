@@ -1,0 +1,116 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="260dp"
+    android:height="260dp"
+    android:viewportWidth="130"
+    android:viewportHeight="130">
+
+    <!-- Shadow. -->
+    <path
+        android:fillColor="@color/colorPaletteGreyLight"
+        android:pathData="M67,61 A60,20 0 1,1 66.9,61z"/>
+
+    <group
+        android:translateX="75"
+        android:translateY="20"
+        android:scaleX="0.6"
+        android:scaleY="0.6">
+
+        <!-- Battery 1. -->
+        <path
+            android:fillColor="@color/colorPaletteYellowLight"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:strokeWidth="2"
+            android:pathData="M65,85 Q50,95 35,85 L35,16 Q50,9 65,16z"/>
+        <path
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:strokeWidth="2"
+            android:pathData="M39,18 Q51,23 65,16 "/>
+        <path
+            android:fillColor="@color/colorPaletteGrey"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:strokeWidth="2"
+            android:pathData="M57,15 Q50,18 43,15 L43,10 Q50,7 57,10z"/>
+        <path
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:strokeWidth="2"
+            android:pathData="M43,10 Q50,13 57,10"/>
+        <path
+            android:strokeColor="@color/colorPaletteRedLight"
+            android:strokeWidth="2"
+            android:pathData="M57,27 L57,37 "/>
+        <path
+            android:strokeColor="@color/colorPaletteRedLight"
+            android:strokeWidth="2"
+            android:pathData="M52,32 Q57,33 62,31 "/>
+        <!-- Battery 2. -->
+        <path
+            android:fillColor="@color/colorPaletteWhite"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:strokeWidth="2"
+            android:pathData="M40,90 Q25,100 10,90 L10,21 Q25,14 40,21z"/>
+        <path
+            android:fillColor="@color/colorPaletteBlueLight"
+            android:pathData="M39,90 Q27,97 13,89 L13,27 Q26,32 39,26z"/>
+        <path
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:strokeWidth="2"
+            android:pathData="M14,23 Q26,28 40,21 "/>
+        <path
+            android:fillColor="@color/colorPaletteGrey"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:strokeWidth="2"
+            android:pathData="M32,20 Q25,23 18,20 L18,15 Q25,12 32,15z"/>
+        <path
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:strokeWidth="2"
+            android:pathData="M18,15 Q25,18 32,15"/>
+        <path
+            android:strokeColor="@color/colorPaletteWhite"
+            android:strokeWidth="2"
+            android:pathData="M32,32 L32,42 "/>
+        <path
+            android:strokeColor="@color/colorPaletteWhite"
+            android:strokeWidth="2"
+            android:pathData="M27,37 Q32,38 37,36 "/>
+    </group>
+
+    <path
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M85,80 Q109,89 120,77 Q126,68 114,65"/>
+
+    <group
+        android:rotation="-75"
+        android:pivotX="83"
+        android:pivotY="81">
+
+        <!-- Pedestal. -->
+        <path
+            android:fillColor="@color/colorPaletteGrey"
+            android:pathData="M95,80 Q85,83 78,79 L78,70 Q85,74 95,70z"/>
+        <path
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:strokeWidth="2"
+            android:pathData="M95,80 Q85,85 75,80 L75,70 Q85,74 95,70z"/>
+        <!-- Lamp. -->
+        <path
+            android:fillColor="@color/colorPaletteGreyLight"
+            android:strokeColor="@color/colorPaletteGrey"
+            android:strokeWidth="1"
+            android:pathData="M90,68.5 Q85,70 80,68.5 L80,55 Q85,53 90,55z "/>
+        <path
+            android:strokeColor="@color/colorPaletteGrey"
+            android:strokeWidth="0.5"
+            android:pathData="M83,55.5 Q85,50 75,35 L77,36 L79,34 L81,36 L83,34 L85,36 L87,34 L89,36 L91,34 L93,36 L95,35 Q85,45 87,55.5"/>
+        <path
+            android:fillColor="@color/colorPaletteWhite"
+            android:fillAlpha="0.5"
+            android:strokeColor="@color/colorPaletteGrey"
+            android:strokeWidth="1.5"
+            android:pathData="M95,67 Q85,71 75,67 Q75,54 72,52 A22,22 0 1,1 98,52 Q95,54 95,67z"/>
+        <path
+            android:fillColor="@color/colorPaletteWhite"
+            android:fillAlpha="1"
+            android:pathData="M92,24 A6,2 0 1,1 91.9,24z"/>
+    </group>
+</vector>

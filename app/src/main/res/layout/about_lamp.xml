@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lamp_bottom_sheet"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="40dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:id="@+id/lamp_about_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPaletteGrey">
+
+        <ImageView
+            android:id="@+id/lamp_about_barimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_up_32dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lamp_about_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPlaceholder"
+        android:paddingTop="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:alpha="0"
+        tools:alpha="1.0">
+
+        <TextView
+            android:id="@+id/lamp_about_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:textColor="@color/colorTextAccent"
+            android:text="@string/textAboutDevice"/>
+
+        <ImageView
+            android:id="@+id/lamp_about_separator1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            app:srcCompat="@drawable/ic_line_separator"
+            android:layout_below="@+id/lamp_about_text"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/lamp_about_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/lamp_about_separator1"
+            android:layout_alignParentStart="true"
+            tools:text="Device name : LIGHT" />
+
+        <TextView
+            android:id="@+id/lamp_about_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_marginStart="8dp"
+            android:layout_below="@+id/lamp_about_name"
+            android:layout_alignParentStart="true"
+            tools:text="Device addres : 00:15:FF:F2:19:4C" />
+
+        <TextView
+            android:id="@+id/lamp_about_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_below="@+id/lamp_about_addr"
+            android:layout_alignStart="@+id/lamp_about_addr"
+            tools:text="Hardware version : 1.4 /05.2016/" />
+
+        <TextView
+            android:id="@+id/lamp_connecting_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lamp_about_version"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorTextAccent"
+            android:text="@string/textConnectStatus" />
+
+        <ImageView
+            android:id="@+id/lamp_about_separator2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            app:srcCompat="@drawable/ic_line_separator"
+            android:layout_below="@+id/lamp_connecting_text"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/lamp_about_tx_packeges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_below="@+id/lamp_about_separator2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            tools:text="Transmitted packages - 100" />
+
+        <TextView
+            android:id="@+id/lamp_about_rx_packeges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_below="@+id/lamp_about_tx_packeges"
+            android:layout_alignStart="@+id/lamp_about_tx_packeges"
+            tools:text="Received packages - 85" />
+
+        <TextView
+            android:id="@+id/lamp_about_err_packeges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_below="@+id/lamp_about_rx_packeges"
+            android:layout_alignStart="@+id/lamp_about_rx_packeges"
+            tools:text="Error packages - 0" />
+
+    </RelativeLayout>
+
+</LinearLayout>

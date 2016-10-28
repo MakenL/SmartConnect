@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/lamp_logo_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/imageLampColorLogo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            tools:ignore="ContentDescription" />
+
+        <SeekBar
+            android:id="@+id/lamp_red_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/styleSeekBarRed"
+            android:layout_below="@+id/lamp_logo_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:progress="33"
+            android:max="255"/>
+
+        <SeekBar
+            android:id="@+id/lamp_green_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/styleSeekBarGreen"
+            android:layout_below="@+id/lamp_red_seekbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:progress="33"
+            android:max="255"/>
+
+        <SeekBar
+            android:id="@+id/lamp_blue_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/styleSeekBarBlue"
+            android:layout_below="@+id/lamp_green_seekbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:progress="33"
+            android:max="255" />
+
+        <Button
+            android:id="@+id/lamp_color_button"
+            android:layout_width="@dimen/dimenButtonWidth"
+            android:layout_height="wrap_content"
+            android:text="@string/actionTextSet"
+            style="@style/styleActionAccentButton"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

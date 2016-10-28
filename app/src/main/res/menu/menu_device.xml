@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.embedhome.btlamp.LampActivity">
+    <item
+        android:id="@+id/menu_lamp_notification"
+        android:orderInCategory="100"
+        android:title="@string/textMenuNotification"
+        android:icon="@drawable/imageMenuNotificationSoundOff"
+        app:showAsAction="always" />
+</menu>

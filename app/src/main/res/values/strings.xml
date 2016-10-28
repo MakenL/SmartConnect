@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Smart Connect</string>
+    <string name="app_title">Welcome to</string>
+    <string name="app_lamp_title">Lamp Control</string>
+
+    <string name="textMenuNotification">Event notification</string>
+
+    <string name="messageBtNotAvaible">Bluetooth module is not available</string>
+    <string name="messageBtDisabled">To continue, you must enable the bluetooth module on your device</string>
+    <string name="messageConnectError">Can not connect to device. May be the device turned off or outside the range of receiving.</string>
+    <string name="messageSmartDeviceConnectError">Can not connect to device. The device is not a SmartConnect device.</string>
+    <string name="messageAppQuit">Do you want exit from application?</string>
+    <string name="messageDeviceConnect" formatted="false">Connecting to %s ..</string>
+    <string name="textFormatPercent" formatted="false">%3.0f%%</string>
+
+    <string name="textErrorOops">OOPS!</string>
+    <string name="textErrorSorry">SORRY!</string>
+    <string name="textActionBtEnable">Yes, enable bluetooth</string>
+    <string name="textActionNoAndReturn">No, return to application</string>
+    <string name="textActionTryAgain">Try againe</string>
+    <string name="textActionBackToList">Back to the list of devices</string>
+    <string name="textActionNoAndExit">No, I want exit</string>
+    <string name="textActionYesAndExit">Yes, I want exit</string>
+    <string name="tetxActionExit">Exit from app</string>
+
+    <string name="actionTextSet">Set</string>
+    <string name="actionTextReset">Reset</string>
+    <string name="actionTextEnable">Enable</string>
+    <string name="actionTextDisable">Disable</string>
+
+    <string name="textStatus">STATUS</string>
+    <string name="textColor">COLOR</string>
+    <string name="textTimer">TIMER</string>
+    <string name="textTimeDevider">:</string>
+
+    <string name="textAboutDevice">About</string>
+    <string name="textConnectStatus">Connecting</string>
+
+    <string name="textDeviceVer" formatted="false">Hardware version : %s</string>
+    <string name="textDeviceName" formatted="false">Device name : %s</string>
+    <string name="textDeviceAddr" formatted="false">Device addres : %s</string>
+    <string name="textTxPackages" formatted="false">Transmitted packages - %d</string>
+    <string name="textRxPackages" formatted="false">Received packages - %d</string>
+    <string name="textErrPackages" formatted="false">Error packages - %d</string>
+
+    <string name="textFormatTimer" formatted="false">%1dh : %02dmin</string>
+    <string name="textFormatHour" formatted="false">%1d</string>
+    <string name="textFormatMin" formatted="false">%02d</string>
+
+    <string name="textFormatPowerBattery" formatted="false">BATTERY %2.1fV</string>
+    <string name="textFormatPowerCharging" formatted="false">CHARGING %2.1fV</string>
+    <string name="textFormatPower" formatted="false">POWER %2.1fV</string>
+
+</resources>

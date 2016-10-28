@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="dimenRecycledPaddingLeftRight">16dp</dimen>
+    <dimen name="dimenRecycledPaddingBottom">24dp</dimen>
+    <dimen name="dimenRecycledPaddingTop">16dp</dimen>
+    <dimen name="dimenRecycledItemWeight">152dp</dimen>
+    <dimen name="dimenRecycledItemHeight">112dp</dimen>
+    <dimen name="dimenRecycledItemCorner">16dp</dimen>
+    <dimen name="dimenRecycledItemInnerMargin">8dp</dimen>
+
+    <color name="colorRecycledItemAvaible">@color/colorTextPrimary</color>
+    <color name="colorRecycledItemNotAvaible">@color/colorTextInactive</color>
+    <color name="colorRecycledItemFound">@color/colorTextSecondary</color>
+    <color name="colorRecycledItemAddr">@color/colorTextSecondary</color>
+
+    <item name="imageConnectRecycledAvaible" type="drawable">@drawable/ic_device_avaible_32dp</item>
+    <item name="imageConnectRecycledNotAvaible" type="drawable">@drawable/ic_device_not_avaible_32dp</item>
+    <item name="imageConnectRecycledOther" type="drawable">@drawable/ic_devices_other_32dp</item>
+
+</resources>

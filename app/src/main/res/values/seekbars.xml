@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorSeekBar">@color/colorPaletteGreyBlue</color>
+    <color name="colorSeekBarProgressRed">@color/colorPaletteRed</color>
+    <color name="colorSeekBarProgressGreen">@color/colorPaletteGreen</color>
+    <color name="colorSeekBarProgressBlue">@color/colorPaletteBlue</color>
+    <color name="colorSeekBarThumbRed">@color/colorSeekBarProgressRed</color>
+    <color name="colorSeekBarThumbGreen">@color/colorSeekBarProgressGreen</color>
+    <color name="colorSeekBarThumbBlue">@color/colorSeekBarProgressBlue</color>
+    <color name="colorSeekBarThumbRedPressed">@color/colorPaletteGreyBlue</color>
+    <color name="colorSeekBarThumbGreenPressed">@color/colorPaletteGreyBlue</color>
+    <color name="colorSeekBarThumbBluePressed">@color/colorPaletteGreyBlue</color>
+    <color name="colorSeekBarThumbStroke">#20000000</color>
+
+    <dimen name="dimenSeekBarThumbWidth">24dp</dimen>
+    <dimen name="dimenSeekBarThumbHeight">24dp</dimen>
+    <dimen name="dimenSeekBarThumbStrokePressed">4dp</dimen>
+    <dimen name="dimenSeekBarWidth">2dp</dimen>
+    <dimen name="dimenSeekBarProgressWidth">4dp</dimen>
+
+    <style name="styleSeekBarRed">
+        <item name="android:max">100</item>
+        <item name="android:thumb">@drawable/ic_thumb_seekbar_red</item>
+        <item name="android:progressDrawable">@drawable/ic_track_seekbar_red</item>
+    </style>
+
+    <style name="styleSeekBarGreen">
+        <item name="android:max">100</item>
+        <item name="android:thumb">@drawable/ic_thumb_seekbar_green</item>
+        <item name="android:progressDrawable">@drawable/ic_track_seekbar_green</item>
+    </style>
+
+    <style name="styleSeekBarBlue">
+        <item name="android:max">100</item>
+        <item name="android:thumb">@drawable/ic_thumb_seekbar_blue</item>
+        <item name="android:progressDrawable">@drawable/ic_track_seekbar_blue</item>
+    </style>
+
+</resources>

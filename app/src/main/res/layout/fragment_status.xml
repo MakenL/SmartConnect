@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/lamp_enable_ind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/imageLampDisable"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            tools:ignore="ContentDescription"/>
+
+        <Button
+            android:id="@+id/lamp_enable_button"
+            android:layout_width="@dimen/dimenButtonWidth"
+            android:layout_height="wrap_content"
+            android:text="@string/actionTextEnable"
+            style="@style/styleActionAccentButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/lamp_battary_ind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_marginTop="16dp"
+            tools:text="BATTERY 3.7V"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/lamp_enable_ind" />
+
+        <TextView
+            android:id="@+id/lamp_timer_ind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/colorTextInactive"
+            tools:text="0h : 00min"
+            android:layout_alignBottom="@+id/lamp_enable_ind"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

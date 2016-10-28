@@ -1,0 +1,82 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="170dp"
+    android:height="130dp"
+    android:viewportHeight="130"
+    android:viewportWidth="170">
+
+    <!-- Shadow. -->
+    <path
+        android:fillColor="@color/colorPaletteGreyLight"
+        android:pathData="M85,61 A83,30 0 1,1 84.9,61z"/>
+
+    <!-- Red bottle. -->
+    <path
+        android:fillColor="@color/colorPaletteRedLight"
+        android:pathData="M40,90 Q27,97 13,89 L13,27 Q25,33 40,26z"/>
+    <path
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M40,90 Q25,100 10,90 L10,21 L8,20 Q7,15 8,10 Q25,2 42,10 Q43,15 42,20 L40,21z"/>
+    <path
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M40,21 Q28,26 17,23"/>
+    <path
+        android:fillColor="@color/colorPaletteYellowLight"
+        android:strokeColor="@color/colorPaletteOrangeLight"
+        android:strokeWidth="2"
+        android:pathData="M35,12 Q25,17 15,12 L15,5 Q25,0 35,5z"/>
+    <path
+        android:strokeColor="@color/colorPaletteOrangeLight"
+        android:strokeWidth="2"
+        android:pathData="M20,7 Q30,9 35,5"/>
+
+    <!-- Green bottle. -->
+    <path
+        android:fillColor="@color/colorPaletteGreenLight"
+        android:pathData="M100,110 Q80,118 53,108 L53,62 Q55,55 63,52 L63,47 Q77,53 90,46 L90,50 Q99,55 100,60z"/>
+    <path
+        android:fillColor="@color/colorPaletteWhite"
+        android:pathData="M85,61 A6,2 0 1,1 84.9,61z"/>
+    <path
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M100,110 Q75,120 50,110 L50,60 Q51,55 60,50 L60,41 L58,40 Q57,35 58,30 Q75,22 92,30 Q93,35 92,40 L90,41 L90,50 Q99,55 100,60z"/>
+    <path
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M90,41 Q78,46 67,43"/>
+    <path
+        android:fillColor="@color/colorPaletteYellowLight"
+        android:strokeColor="@color/colorPaletteOrangeLight"
+        android:strokeWidth="2"
+        android:pathData="M85,32 Q75,37 65,32 L65,20 Q75,15 85,20z"/>
+    <path
+        android:strokeColor="@color/colorPaletteOrangeLight"
+        android:strokeWidth="2"
+        android:pathData="M70,22 Q80,24 85,20"/>
+
+    <!-- Blue bottle. -->
+    <path
+        android:fillColor="@color/colorPaletteBlueLight"
+        android:pathData="M160,90 Q140,98 113,88 L113,62 Q115,55 123,52 L123,27 Q137,33 150,26 L150,50 Q159,55 160,60z"/>
+    <path
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M160,90 Q135,100 110,90 L110,60 Q111,55 120,50 L120,21 L118,20 Q117,15 118,10 Q135,2 152,10 Q153,15 152,20 L150,21 L150,50 Q159,55 160,60z"/>
+    <path
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M150,21 Q138,26 127,23"/>
+    <path
+        android:fillColor="@color/colorPaletteYellowLight"
+        android:strokeColor="@color/colorPaletteOrangeLight"
+        android:strokeWidth="2"
+        android:pathData="M145,12 Q135,17 125,12 L125,5 Q135,0 145,5z"/>
+    <path
+        android:strokeColor="@color/colorPaletteOrangeLight"
+        android:strokeWidth="2"
+        android:pathData="M130,7 Q140,9 145,5"/>
+
+
+</vector>

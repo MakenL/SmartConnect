@@ -1,0 +1,50 @@
+<resources>
+
+    <color name="colorPaletteWhite">#FFFFFF</color>
+    <color name="colorPaletteBlue">#00AAFF</color>
+    <color name="colorPaletteBlueDark">#3173B9</color>
+    <color name="colorPaletteBlueLight">#90CAF9</color>
+    <color name="colorPaletteGreen">#19B934</color>
+    <color name="colorPaletteGreenLight">#A5D6A7</color>
+    <color name="colorPaletteRed">#F9243D</color>
+    <color name="colorPaletteRedLight">#EF9A9A</color>
+    <color name="colorPaletteYellowLight">#FFF59D</color>
+    <color name="colorPaletteOrange">#FF7800</color>
+    <color name="colorPaletteOrangeLight">#FFB74D</color>
+    <color name="colorPaletteGreyBlue">#7F8FA4</color>
+    <color name="colorPaletteGrey">#ACB0B5</color>
+    <color name="colorPaletteGreyLight">#E6EAF0</color>
+    <color name="colorPaletteGreyDark">#333C48</color>
+
+    <color name="colorSeparator">@color/colorPaletteBlueDark</color>
+    <color name="colorPlaceholder">@color/colorPaletteGreyLight</color>
+    <color name="colorAccent">@color/colorPaletteOrange</color>
+
+    <color name="colorTextInverse">@color/colorPaletteWhite</color>
+    <color name="colorTextPrimary">@color/colorPaletteGreyDark</color>
+    <color name="colorTextSecondary">@color/colorPaletteGreyBlue</color>
+    <color name="colorTextInactive">@color/colorPaletteGrey</color>
+    <color name="colorTextAccent">@color/colorPaletteBlueDark</color>
+    <color name="colorTextWarning">@color/colorPaletteRed</color>
+
+
+    <dimen name="dimenAppBarElevation">0dp</dimen>
+    <dimen name="dimenAppBarHeight">164dp</dimen>
+    <dimen name="dimenFabMargin">16dp</dimen>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPaletteWhite</item>
+        <item name="colorPrimaryDark">@color/colorPaletteGrey</item>
+        <item name="colorAccent">@color/colorPaletteOrange</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
+
+</resources>

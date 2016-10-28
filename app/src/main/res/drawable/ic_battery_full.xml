@@ -1,0 +1,72 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="83dp"
+    android:height="122dp"
+    android:viewportWidth="75"
+    android:viewportHeight="110">
+
+    <!-- Place. -->
+    <path
+        android:fillColor="#E6EAF0"
+        android:pathData="M38,72 A33,18 0 1,1 37.9,72z"/>
+
+    <!-- Battery 1. -->
+    <path
+        android:fillColor="@color/colorPaletteWhite"
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M65,85 Q50,95 35,85 L35,16 Q50,9 65,16z"/>
+    <path
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M39,18 Q51,23 65,16 "/>
+    <path
+        android:fillColor="@color/colorPaletteGrey"
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M57,15 Q50,18 43,15 L43,10 Q50,7 57,10z"/>
+    <path
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M43,10 Q50,13 57,10"/>
+    <path
+        android:strokeColor="@color/colorPaletteRedLight"
+        android:strokeWidth="2"
+        android:pathData="M57,27 L57,37 "/>
+    <path
+        android:strokeColor="@color/colorPaletteRedLight"
+        android:strokeWidth="2"
+        android:pathData="M52,32 Q57,33 62,31 "/>
+
+    <!-- Battery 2. -->
+    <path
+        android:fillColor="@color/colorPaletteWhite"
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M40,90 Q25,100 10,90 L10,21 Q25,14 40,21z"/>
+    <path
+        android:fillColor="#A5D6A7"
+        android:pathData="M39,90 Q27,97 13,89 L13,27 Q26,32 39,26z"/>
+    <path
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M14,23 Q26,28 40,21 "/>
+    <path
+        android:fillColor="@color/colorPaletteGrey"
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M32,20 Q25,23 18,20 L18,15 Q25,12 32,15z"/>
+    <path
+        android:strokeColor="@color/colorPaletteGreyBlue"
+        android:strokeWidth="2"
+        android:pathData="M18,15 Q25,18 32,15"/>
+
+    <path
+        android:strokeColor="@color/colorPaletteWhite"
+        android:strokeWidth="2"
+        android:pathData="M32,32 L32,42 "/>
+    <path
+        android:strokeColor="@color/colorPaletteWhite"
+        android:strokeWidth="2"
+        android:pathData="M27,37 Q32,38 37,36 "/>
+
+</vector>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imageConnectFab" type="drawable">@drawable/ic_add_24dp</item>
+    <item name="imageConnectFabAnim" type="drawable">@drawable/ic_circle_search</item>
+    <item name="imageConnectLogo" type="drawable">@drawable/ic_logo</item>
+    <item name="imageConnectError" type="drawable">@drawable/ic_error_image</item>
+    <item name="imageConnectErrorBackground" type="drawable">@drawable/ic_circle_background</item>
+
+    <item name="imageMenuNotificationSoundOff" type="drawable">@drawable/ic_volume_off_24dp</item>
+    <item name="imageMenuNotificationSoundOn" type="drawable">@drawable/ic_volume_on_24dp</item>
+    <item name="imageMenuNotificationVibration" type="drawable">@drawable/ic_vibration_24dp</item>
+
+    <item name="imageLampEnable" type="drawable">@drawable/ic_lamp_image_on</item>
+    <item name="imageLampDisable" type="drawable">@drawable/ic_lamp_image_off</item>
+    <item name="imageLampColorLogo" type="drawable">@drawable/ic_color_image</item>
+    <item name="imageLampTimerLogo" type="drawable">@drawable/ic_timer_image</item>
+
+</resources>

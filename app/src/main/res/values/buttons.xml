@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="dimenButtonWidth">120dp</dimen>
+    <dimen name="dimenButtonRadius">8dp</dimen>
+    <dimen name="dimenButtonPaddingTopBottom">8dp</dimen>
+    <dimen name="dimenButtonPaddingLeftRight">16dp</dimen>
+    <dimen name="dimenButtonStroke">2dp</dimen>
+
+    <style name="styleDialogAccentButton">
+        <item name="android:background">@drawable/ic_button_dialog_accent</item>
+        <item name="android:textColor">@color/colorTextInverse</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="styleActionAccentButton">
+        <item name="android:background">@drawable/ic_button_accent</item>
+        <item name="android:textColor">@color/colorTextInverse</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="styleActionButton">
+        <item name="android:background">@drawable/ic_button</item>
+        <item name="android:textColor">@color/colorTextInverse</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>
