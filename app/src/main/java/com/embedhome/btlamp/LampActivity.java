@@ -1,5 +1,9 @@
 package com.embedhome.btlamp;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Handler;
@@ -21,6 +25,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AnticipateInterpolator;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.OvershootInterpolator;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -34,6 +44,7 @@ public class LampActivity extends AppCompatActivity implements BluetoothWake.OnE
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
+    private TabLayout tabLayout;
 
     private BluetoothWake btWake;
     private checkStatusDeviceThread checkStatusDeviceTask;
@@ -61,6 +72,13 @@ public class LampActivity extends AppCompatActivity implements BluetoothWake.OnE
     private RelativeLayout bottomSheetBar;
     private RelativeLayout bottomSheetData;
     private ImageView bottomSheetImage;
+
+    private ImageView dialog_image;
+    private TextView dialog_title;
+    private TextView dialog_message;
+    private Button dialog_positive;
+    private Button dialog_negative;
+    private CheckBox dialog_bt;
 
     private TextView lamp_tx;
     private TextView lamp_rx;
@@ -152,7 +170,7 @@ public class LampActivity extends AppCompatActivity implements BluetoothWake.OnE
             }
         });
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.lamp_tabs);
+        tabLayout = (TabLayout) findViewById(R.id.lamp_tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
         lamp_tx = (TextView)findViewById(R.id.lamp_about_tx_packeges);
@@ -205,8 +223,32 @@ public class LampActivity extends AppCompatActivity implements BluetoothWake.OnE
             }
         });
 
-    }
+        dialog_image = (ImageView) findViewById(R.id.lamp_dialog_image);
+        dialog_title = (TextView) findViewById(R.id.lamp_dialog_title);
+        dialog_message = (TextView) findViewById(R.id.lamp_dialog_message);
+        dialog_bt = (CheckBox) findViewById(R.id.lamp_dialog_bluetooth);
 
+        dialog_positive = (Button) findViewById(R.id.lamp_dialog_pbutton);
+        dialog_positive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                returnDevicePager();
+            }
+        });
+
+        dialog_negative = (Button) findViewById(R.id.lamp_dialog_nbutton);
+        dialog_negative.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+
+                if (dialog_bt.isChecked()) {
+                    btWake.sendPackage(btWake.WAKE_ADDR_NO, btWake.WAKE_CMD_COMOFF, 0, null);
+                }
+                btWake.disconnectDevice();
+            }
+        });
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -236,7 +278,9 @@ public class LampActivity extends AppCompatActivity implements BluetoothWake.OnE
                 if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
                     bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
                 } else {
-                    btWake.disconnectDevice();
+                    if (mViewPager.getVisibility() == View.VISIBLE){
+                        showDisconnectDialog();
+                    }
                 }
                 return true;
             case R.id.menu_lamp_notification:
@@ -283,7 +327,9 @@ public class LampActivity extends AppCompatActivity implements BluetoothWake.OnE
         if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
         } else {
-            btWake.disconnectDevice();
+            if (mViewPager.getVisibility() == View.VISIBLE){
+                showDisconnectDialog();
+            };
         }
     }
 
@@ -386,6 +432,7 @@ public class LampActivity extends AppCompatActivity implements BluetoothWake.OnE
     @Override
     public void onClickEnableButton() {
         btWake.sendPackage(btWake.WAKE_ADDR_NO, btWake.WAKE_CMD_ENABLE, 0, null);
+        app_notification.show();
         sendWakePackage();
     }
 
@@ -398,6 +445,7 @@ public class LampActivity extends AppCompatActivity implements BluetoothWake.OnE
         colors[2] = blue;
 
         btWake.sendPackage(btWake.WAKE_ADDR_NO, btWake.WAKE_CMD_SETCLR, 3, colors);
+        app_notification.show();
         sendWakePackage();
     }
 
@@ -408,6 +456,7 @@ public class LampActivity extends AppCompatActivity implements BluetoothWake.OnE
         times[1] = min;
 
         btWake.sendPackage(btWake.WAKE_ADDR_NO, btWake.WAKE_CMD_SETTMR, 2, times);
+        app_notification.show();
         sendWakePackage();
     }
 
@@ -542,5 +591,209 @@ public class LampActivity extends AppCompatActivity implements BluetoothWake.OnE
 
             } while (true);
         }
+    }
+
+    private void showDisconnectDialog(){
+
+        // воспроизводим анимацию
+        AnimatorSet anim = new AnimatorSet();
+        anim.playSequentially(
+                getHideDevicePagerAnimation(),
+                getShowDialogAnimation()
+        );
+        anim.start();
+    }
+
+    private void returnDevicePager(){
+
+        // воспроизводим анимацию
+        AnimatorSet anim = new AnimatorSet();
+        anim.playSequentially(
+                getHideDialogAnimation(),
+                getShowDevicePagerAnimation()
+        );
+        anim.start();
+    }
+
+    private AnimatorSet getShowDevicePagerAnimation(){
+
+        AnimatorListenerAdapter showAnimatorListener = new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                super.onAnimationStart(animation);
+                mViewPager.setVisibility(View.VISIBLE);
+                tabLayout.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                bottomSheetBehavior.setHideable(false);
+            }
+        };
+
+        AnimatorSet expand_anim = new AnimatorSet();
+        expand_anim.playTogether(
+                ObjectAnimator.ofFloat(mViewPager, mViewPager.SCALE_X, 1f),
+                ObjectAnimator.ofFloat(mViewPager, mViewPager.SCALE_Y, 1f),
+                ObjectAnimator.ofFloat(mViewPager, mViewPager.ALPHA, 1f)
+        );
+        expand_anim.setDuration(250);
+        expand_anim.setInterpolator(new OvershootInterpolator());
+
+        AnimatorSet slide_anim = new AnimatorSet();
+        slide_anim.playTogether(
+                ObjectAnimator.ofFloat(mViewPager, mViewPager.X, 0),
+                ObjectAnimator.ofFloat(tabLayout, tabLayout.X, 0)
+        );
+        slide_anim.setDuration(250);
+        slide_anim.setInterpolator(new DecelerateInterpolator());
+
+        AnimatorSet show_anim = new AnimatorSet();
+        show_anim.playSequentially(
+                slide_anim,
+                expand_anim
+        );
+        show_anim.addListener(showAnimatorListener);
+
+        return show_anim;
+    }
+
+    private AnimatorSet getHideDevicePagerAnimation(){
+
+        AnimatorListenerAdapter hideAnimatorListener = new AnimatorListenerAdapter() {
+
+            @Override
+            public void onAnimationStart(Animator animation) {
+                super.onAnimationStart(animation);
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+
+                mViewPager.setVisibility(View.INVISIBLE);
+                tabLayout.setVisibility(View.INVISIBLE);
+
+                bottomSheetBehavior.setHideable(true);
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
+            }
+        };
+
+        AnimatorSet collaps_anim = new AnimatorSet();
+        collaps_anim.playTogether(
+                ObjectAnimator.ofFloat(mViewPager, mViewPager.SCALE_X, 0.85f),
+                ObjectAnimator.ofFloat(mViewPager, mViewPager.SCALE_Y, 0.85f),
+                ObjectAnimator.ofFloat(mViewPager, mViewPager.ALPHA, 0.75f)
+        );
+        collaps_anim.setDuration(250);
+        collaps_anim.setInterpolator(new AccelerateInterpolator());
+
+        AnimatorSet slide_anim = new AnimatorSet();
+        slide_anim.playTogether(
+                ObjectAnimator.ofFloat(mViewPager, mViewPager.X, mViewPager.getHeight()),
+                ObjectAnimator.ofFloat(tabLayout, tabLayout.X, tabLayout.getHeight())
+        );
+        slide_anim.setDuration(250);
+        slide_anim.setInterpolator(new AnticipateInterpolator());
+
+        AnimatorSet hide_anim = new AnimatorSet();
+        hide_anim.playSequentially(
+                collaps_anim,
+                slide_anim
+        );
+        hide_anim.addListener(hideAnimatorListener);
+
+        return hide_anim;
+    }
+
+    private AnimatorSet getShowDialogAnimation(){
+
+        AnimatorListenerAdapter showAnimatorListener = new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                super.onAnimationEnd(animation);
+
+                dialog_image.setVisibility(View.VISIBLE);
+                dialog_title.setVisibility(View.VISIBLE);
+                dialog_message.setVisibility(View.VISIBLE);
+                dialog_positive.setVisibility(View.VISIBLE);
+                dialog_negative.setVisibility(View.VISIBLE);
+                dialog_bt.setVisibility(View.VISIBLE);
+            }
+        };
+
+        AnimatorSet show_image_anim = new AnimatorSet();
+        show_image_anim.playTogether(
+                ObjectAnimator.ofFloat(dialog_image, dialog_image.SCALE_X, 1f),
+                ObjectAnimator.ofFloat(dialog_image, dialog_image.SCALE_Y, 1f),
+                ObjectAnimator.ofFloat(dialog_image, dialog_image.ALPHA, 1f)
+        );
+        show_image_anim.setInterpolator(new OvershootInterpolator());
+
+        AnimatorSet show_text_anim = new AnimatorSet();
+        show_text_anim.playTogether(
+                ObjectAnimator.ofFloat(dialog_title, dialog_title.ALPHA, 1f),
+                ObjectAnimator.ofFloat(dialog_message, dialog_message.ALPHA, 1f),
+                ObjectAnimator.ofFloat(dialog_positive, dialog_positive.ALPHA, 1f),
+                ObjectAnimator.ofFloat(dialog_negative, dialog_negative.ALPHA, 1f),
+                ObjectAnimator.ofFloat(dialog_bt, dialog_bt.ALPHA, 1f)
+        );
+        show_text_anim.setInterpolator(new DecelerateInterpolator());
+
+        AnimatorSet show_anim = new AnimatorSet();
+        show_anim.playTogether(
+                show_image_anim,
+                show_text_anim
+        );
+        show_anim.setDuration(350);
+        show_anim.addListener(showAnimatorListener);
+
+        return show_anim;
+    }
+
+    private AnimatorSet getHideDialogAnimation(){
+
+        AnimatorListenerAdapter hideAnimatorListener = new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                dialog_image.setVisibility(View.INVISIBLE);
+                dialog_title.setVisibility(View.INVISIBLE);
+                dialog_message.setVisibility(View.INVISIBLE);
+                dialog_positive.setVisibility(View.INVISIBLE);
+                dialog_negative.setVisibility(View.INVISIBLE);
+                dialog_bt.setVisibility(View.INVISIBLE);
+            }
+        };
+
+        AnimatorSet hide_image_anim = new AnimatorSet();
+        hide_image_anim.playTogether(
+                ObjectAnimator.ofFloat(dialog_image, dialog_image.SCALE_X, 0.1f),
+                ObjectAnimator.ofFloat(dialog_image, dialog_image.SCALE_Y, 0.1f),
+                ObjectAnimator.ofFloat(dialog_image, dialog_image.ALPHA, 0f)
+        );
+        hide_image_anim.setInterpolator(new AnticipateInterpolator());
+
+        AnimatorSet hide_text_anim = new AnimatorSet();
+        hide_text_anim.playTogether(
+                ObjectAnimator.ofFloat(dialog_title, dialog_title.ALPHA, 0f),
+                ObjectAnimator.ofFloat(dialog_message, dialog_message.ALPHA, 0f),
+                ObjectAnimator.ofFloat(dialog_positive, dialog_positive.ALPHA, 0f),
+                ObjectAnimator.ofFloat(dialog_negative, dialog_negative.ALPHA, 0f),
+                ObjectAnimator.ofFloat(dialog_bt, dialog_bt.ALPHA, 0f)
+        );
+        hide_text_anim.setInterpolator(new AccelerateInterpolator());
+
+        AnimatorSet hide_anim = new AnimatorSet();
+        hide_anim.playTogether(
+                hide_image_anim,
+                hide_text_anim
+        );
+        hide_anim.setDuration(350);
+        hide_anim.addListener(hideAnimatorListener);
+
+        return hide_anim;
     }
 }

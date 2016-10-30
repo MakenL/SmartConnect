@@ -282,24 +282,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
-
-        switch (app_notification.updateNotification(this)) {
-            case AppNotification.NOTIFICATION_DISABLE:
-                item_notification.setIcon(R.drawable.imageMenuNotificationSoundOff);
-                break;
-            case AppNotification.NOTIFICATION_RINGTON:
-                item_notification.setIcon(R.drawable.imageMenuNotificationSoundOn);
-                break;
-            case AppNotification.NOTIFICATION_VIBRO:
-                item_notification.setIcon(R.drawable.imageMenuNotificationVibration);
-                break;
-        }
-
-    }
-
-    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         if (requestCode == BT_REQUEST_ENABLE) {
@@ -315,12 +297,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (requestCode == BT_REQUEST_CONNECT) {
 
             btWake.setEventListener(this);
+
+            switch (app_notification.updateNotification(this)) {
+                case AppNotification.NOTIFICATION_DISABLE:
+                    item_notification.setIcon(R.drawable.imageMenuNotificationSoundOff);
+                    break;
+                case AppNotification.NOTIFICATION_RINGTON:
+                    item_notification.setIcon(R.drawable.imageMenuNotificationSoundOn);
+                    break;
+                case AppNotification.NOTIFICATION_VIBRO:
+                    item_notification.setIcon(R.drawable.imageMenuNotificationVibration);
+                    break;
+            }
+
             switch (resultCode) {
                 case BT_RESULT_DISCONNECT:
+
+                    app_notification.show();
                     // Отображаем список устройств
                     getShowDeviceListAnimation().start();
                     break;
                 case BT_RESULT_ERROR:
+
+                    app_notification.show();
                     // отображаем диалог ошибки подключения
                     getShowDialogAnimation(R.string.textErrorOops,
                             R.string.messageConnectError,
@@ -330,6 +329,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             onClickCancelListener).start();
                     break;
                 case BT_RESULT_DISABLE:
+
+                    app_notification.show();
                     // Очищаем список устройств в RecycledView
                     ((btDeviceAdapter) btdevice_list.getAdapter()).clearItems();
                     // отображаем диалог включения bluetooth
@@ -474,6 +475,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             connect_timer.cancel();
             // скрываем диалог подключения
             getHideConnectAnimation().start();
+            app_notification.show();
 
             // Подключаемся к устройству
             Intent intent = new Intent(getApplicationContext(), LampActivity.class);
