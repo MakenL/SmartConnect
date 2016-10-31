@@ -10,8 +10,8 @@
     <string name="messageConnectError">Can not connect to device. May be the device turned off or outside the range of receiving.</string>
     <string name="messageSmartDeviceConnectError">Can not connect to device. The device is not a SmartConnect device.</string>
     <string name="messageAppQuit">Do you want exit from application?</string>
-    <string name="messageDisconnect">Do you want disconnect from device?</string>
-    <string name="messageDisableBtDevice">disable bluetooth in the device</string>
+    <string name="messageDisconnect">Do you want disconnect from lamp?</string>
+    <string name="messageDisableBtDevice">disable bluetooth in the lamp</string>
     <string name="messageDeviceConnect" formatted="false">Connecting to %s ..</string>
 
     <string name="textErrorOops">OOPS!</string>
@@ -35,7 +35,7 @@
     <string name="textTimer">TIMER</string>
     <string name="textTimeDevider">:</string>
 
-    <string name="textAboutDevice">About</string>
+    <string name="textAboutDevice">About lamp</string>
     <string name="textConnectStatus">Connecting</string>
 
     <string name="textFormatPercent" formatted="false">%3.0f%%</string>

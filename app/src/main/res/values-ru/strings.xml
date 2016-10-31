@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Connect</string>
+    <string name="app_title">Добро пожаловать в</string>
+    <string name="app_lamp_title">Управление светильником</string>
+
+    <string name="textMenuNotification">Уведомление о событиях</string>
+
+    <string name="messageBtNotAvaible">Модуль bluetooth отсутствует на вашем устройстве</string>
+    <string name="messageBtDisabled">Для продолжения работы, необходимо включить модуль bluetooth на вашем устройстве</string>
+    <string name="messageConnectError">Невозможно подключиться. Возможно устройство выключено или находится вне зоны приема.</string>
+    <string name="messageSmartDeviceConnectError">Невозможно подключиться. Устройство не является устройством SmartConnect.</string>
+    <string name="messageAppQuit">Вы хотите выйти из приложения?</string>
+    <string name="messageDisableBtDevice">выключить bluetooth светильника</string>
+    <string name="messageDisconnect">Прервать соединение со светильником?</string>
+    <string name="messageDeviceConnect" formatted="false">Подключение к %s ..</string>
+
+    <string name="textErrorOops">ОЙ!</string>
+    <string name="textErrorSorry">ИЗВИНИТЕ!</string>
+    <string name="textActionBtEnable">Да, включить bluetooth</string>
+    <string name="textActionNoAndReturn">Нет, вернуться в приложение</string>
+    <string name="textActionTryAgain">Повторить</string>
+    <string name="textActionBackToList">Вернуться к списку устройств</string>
+    <string name="textActionNoAndExit">Нет, я хочу выйти</string>
+    <string name="textActionYesAndExit">Да, я хочу выйти</string>
+    <string name="tetxActionExit">Выйти из приложения</string>
+    <string name="tetxActionDisconnect">Прервать соединение</string>
+
+    <string name="actionTextSet">Применить</string>
+    <string name="actionTextReset">Сбросить</string>
+    <string name="actionTextEnable">Включить</string>
+    <string name="actionTextDisable">Выключить</string>
+
+    <string name="textStatus">СТАТУС</string>
+    <string name="textColor">ЦВЕТ</string>
+    <string name="textTimer">ТАЙМЕР</string>
+    <string name="textTimeDevider">:</string>
+
+    <string name="textAboutDevice">Устройство</string>
+    <string name="textConnectStatus">Соединение</string>
+
+    <string name="textFormatPercent" formatted="false">%3.0f%%</string>
+    <string name="textDeviceAddr" formatted="false">Адрес устройства : %s</string>
+    <string name="textDeviceName" formatted="false">Имя устройства : %s</string>
+    <string name="textDeviceVer" formatted="false">Версия устройства : %s</string>
+    <string name="textTxPackages" formatted="false">Переданные пакеты - %d</string>
+    <string name="textRxPackages" formatted="false">Принятые пакеты - %d</string>
+    <string name="textErrPackages" formatted="false">Ошибочные пакеты - %d</string>
+
+    <string name="textFormatTimer" formatted="false">%1dч : %02dмин</string>
+    <string name="textFormatHour" formatted="false">%1d</string>
+    <string name="textFormatMin" formatted="false">%02d</string>
+
+    <string name="textFormatPower" formatted="false">СЕТЬ %2.1fВ</string>
+    <string name="textFormatPowerBattery" formatted="false">БАТАРЕЯ %2.1fВ</string>
+    <string name="textFormatPowerCharging" formatted="false">ЗАРЯДКА %2.1fВ</string>
+
+</resources>

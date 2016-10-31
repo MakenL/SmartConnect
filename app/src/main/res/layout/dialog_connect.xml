@@ -58,7 +58,7 @@
         android:layout_centerHorizontal="true"
         android:alpha="0"
         android:visibility="invisible"
-        tools:text="OOPS!"
+        tools:text="@string/textErrorOops"
         tools:alpha="1"
         tools:visibility="visible" />
 
@@ -97,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/Base.Widget.AppCompat.Button.Borderless"
-        android:textColor="@color/colorTextSecondary"
+        android:textColor="@color/colorTextAccent"
         android:layout_below="@+id/connect_dialog_pbutton"
         android:layout_centerHorizontal="true"
         android:alpha="0"

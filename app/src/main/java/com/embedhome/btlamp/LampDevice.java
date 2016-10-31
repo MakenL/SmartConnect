@@ -29,7 +29,6 @@ public class LampDevice extends Fragment {
     private NumberPicker hour_ind;
     private NumberPicker min_ind;
     private Button settimer_button;
-    private Button clrtimer_button;
 
     private OnEventListener listeren;
 
@@ -116,14 +115,6 @@ public class LampDevice extends Fragment {
                         listeren.onSetTimer(hour_ind.getValue(), min_ind.getValue());
                     }
                 });
-                clrtimer_button = (Button) rootView.findViewById(R.id.lamp_clrtimer_button);
-                clrtimer_button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        listeren.onSetTimer(0, 0);
-                    }
-                });
-
                 break;
         }
 

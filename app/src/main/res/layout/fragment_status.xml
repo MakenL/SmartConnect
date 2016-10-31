@@ -24,7 +24,7 @@
 
         <Button
             android:id="@+id/lamp_enable_button"
-            android:layout_width="@dimen/dimenButtonWidth"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/actionTextEnable"
             style="@style/styleActionAccentButton"
@@ -38,7 +38,7 @@
             android:textSize="18sp"
             android:textColor="@color/colorTextPrimary"
             android:layout_marginTop="16dp"
-            tools:text="BATTERY 3.7V"
+            tools:text="@string/textFormatPowerBattery"
             android:layout_alignParentTop="true"
             android:layout_alignEnd="@+id/lamp_enable_ind" />
 
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textColor="@color/colorTextInactive"
-            tools:text="0h : 00min"
+            tools:text="@string/textFormatTimer"
             android:layout_alignBottom="@+id/lamp_enable_ind"
             android:layout_centerHorizontal="true" />
 

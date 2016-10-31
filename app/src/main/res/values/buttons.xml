@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="dimenButtonWidth">120dp</dimen>
     <dimen name="dimenButtonRadius">8dp</dimen>
     <dimen name="dimenButtonPaddingTopBottom">8dp</dimen>
     <dimen name="dimenButtonPaddingLeftRight">16dp</dimen>
