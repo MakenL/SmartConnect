@@ -1,0 +1,74 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="100dp"
+    android:viewportWidth="400"
+    android:viewportHeight="200">
+
+    <!-- Shadow. -->
+    <path
+        android:fillColor="@color/colorPaletteGrey"
+        android:fillAlpha="0.4"
+        android:pathData="M200,135 A190,30 0 1,1 199.9,135z"/>
+
+    <group>
+        <path
+            android:strokeWidth="3"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:fillColor="@color/colorPaletteGreyLight"
+            android:pathData="M37,137 L37,32 Q37,10 62,10 L142,11 Q160,11 160,32 L160,127 Q160,150 145,150 L66,164 Q37,164 37,137z"/>
+        <path
+            android:strokeWidth="3"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:fillColor="@color/colorPaletteWhite"
+            android:fillAlpha="0.5"
+            android:pathData="M64,123 L64,47 Q64,32 80,32 L133,31 Q145,31 145,44 L145,112 Q145,131 134,131 L76,138 Q64,138 64,123z"/>
+        <path
+            android:fillColor="@color/colorPaletteGreyDark"
+            android:fillAlpha="0.2"
+            android:pathData="M106,43 Q145,74 116,122 Q144,102 134,74 Q139,53 106,43z"/>
+        <path
+            android:strokeWidth="3"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:pathData="M106,43 A30,41 0 1,1 105.9,43z"/>
+        <path
+            android:strokeWidth="3"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:fillColor="@color/colorPaletteWhite"
+            android:pathData="M89,78 A4,8 0 1,1 88.9,78z M117,75 A4,8 0 1,1 116.9,75z"/>
+    </group>
+
+    <group>
+        <path
+            android:strokeWidth="3"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:fillColor="@color/colorPaletteGreyLight"
+            android:pathData="M248,38 L215,38 Q208,43 215,48 L242,48z"/>
+        <path
+            android:strokeWidth="3"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:fillColor="@color/colorPaletteGreyLight"
+            android:pathData="M227,73 L192,73 Q185,78 192,83 L225,83z"/>
+        <path
+            android:strokeWidth="3"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:fillColor="@color/colorPaletteWhite"
+
+            android:pathData="M225,77 L254,29 L278,30 Q290,47 299,47 L338,50 L338,66 L334,76 Q290,84 257,101 L235,102 Q224,101 224,95 Q223,80 225,77z"/>
+        <path
+            android:strokeWidth="3"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:pathData="M257,101 Q251,86 256,76 L276,38"/>
+        <path
+            android:strokeWidth="3"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:pathData="M256,76 Q278,65 333,61 L338,50 M333,61 L334,76"/>
+
+        <path
+            android:strokeWidth="9"
+            android:strokeColor="@color/colorPaletteGreyBlue"
+            android:pathData="M335,62 Q420,78 335,114 Q250,145 385,153 "/>
+
+    </group>
+
+
+</vector>

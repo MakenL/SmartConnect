@@ -14,5 +14,6 @@
     <item name="imageLampDisable" type="drawable">@drawable/ic_lamp_image_off</item>
     <item name="imageLampColorLogo" type="drawable">@drawable/ic_color_image</item>
     <item name="imageLampTimerLogo" type="drawable">@drawable/ic_timer_image</item>
+    <item name="imageLampDisconnect" type="drawable">@drawable/ic_disconnect_image</item>
 
 </resources>
